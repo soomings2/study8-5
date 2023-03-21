@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="stylesheet" href="./main.css" />
+    <title>반응형회원가입(정보입력)</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+
+  <body>
+    <div class="join2_header">
+      <h2 class="join2_title">회원가입</h2>
+    </div>
+
+    <div class="join2_body">
+      <div class="join2_cont">
+        <div class="step_nav">
+          <ul class="step_nav_ul">
+            <li class="selected1">약관동의</li>
+            <li class="step_nav_arrow"></li>
+            <li class="selected1">본인인증</li>
+            <li class="step_nav_arrow"></li>
+            <li class="selected">정보입력</li>
+            <li class="step_nav_arrow"></li>
+            <li>가입완료</li>
+          </ul>
+        </div>
+
+        <div class="form_box">
+          <h3 class="title_2">정보입력</h3>
+          <p class="txt-1">
+            회원정보는 예약이나 각종 이벤트 참여에 따른 정보 제공에 활용되므로
+            정확하게 입력해 주십시오.<br />
+          </p>
+          <em class="color-point-red">(*) 항목은 필수 입력 항목입니다.</em>
+        </div>
+
+        <div class="form-grid">
+          <dl class="form-grid-item">
+            <dt class="label">아이디</dt>
+            <dd class="cont" id="mberId">
+              <div class="inp-box">
+                <input
+                  type="text"
+                  class="inp-base"
+                  value=""
+                  maxlength="40"
+                  placeholder="아이디를 입력하세요"
+                />
+                <button type="button" class="btn-type-inner">
+                  <span>중복 확인</span>
+                </button>
+              </div>
+            </dd>
+          </dl>
+
+          <dl class="form-grid-item">
+            <dt class="label">비밀번호</dt>
+            <dd class="cont" id="mberPassword">
+              <div class="inp-box">
+                <input
+                  type="password"
+                  class="inp-base"
+                  value=""
+                  maxlength="16"
+                  placeholder="비밀번호를 입력하세요"
+                />
+              </div>
+              <p class="msg-txt">8~16자의 영문,숫자,특수문자</p>
+              <!-- <p class="msg-error" style="">8~16자의 영문,숫자,특수문자를 사용하세요.</p>            </dd> -->
+            </dd>
+          </dl>
+
+          <dl class="form-grid-item">
+            <dt class="label">비밀번호 확인</dt>
+            <dd class="cont" id="mberPassword2">
+              <div class="inp-box">
+                <input
+                  type="password"
+                  class="inp-base"
+                  value=""
+                  maxlength="16"
+                  placeholder="비밀번호를 재입력하세요"
+                />
+              </div>
+              <p class="msg-error" style="display: none"></p>
+            </dd>
+          </dl>
+
+          <dl class="form-grid-item">
+            <dt class="label">이름</dt>
+            <dd class="cont">
+              <div class="inp-box">
+                <input
+                  type="text"
+                  class="inp-base-gray"
+                  placeholder=""
+                  maxlength="20"
+                  id="mberNm"
+                />
+              </div>
+            </dd>
+          </dl>
+
+          <dl class="form-grid-item">
+            <dt class="label">생년월일</dt>
+            <dd class="cont">
+              <div class="inp-box">
+                <input
+                  type="text"
+                  class="inp-base-gray"
+                  placeholder=""
+                  maxlength="8"
+                  id="mberPersonalIdBirth"
+                />
+              </div>
+            </dd>
+          </dl>
+
+          <dl class="form-grid-item">
+            <dt class="label">성별</dt>
+
+            <dd class="cont">
+              <div class="inp-box radio-box">
+                <label class="inp-radio" for="mberSexCode1">
+                  <input
+                    type="radio"
+                    name="mberSexCode"
+                    value="SX0101"
+                    checked=""
+                    id="mberSexCode1"
+                    disabled=""
+                  />
+                  <span class="label2">남성</span>
+                </label>
+
+                <label class="inp-radio" for="mberSexCode2">
+                  <input
+                    type="radio"
+                    name="mberSexCode"
+                    value="SX0102"
+                    id="mberSexCode2"
+                    disabled=""
+                  />
+                  <span class="label2">여성</span>
+                </label>
+              </div>
+            </dd>
+          </dl>
+
+          <dl class="form-grid-item">
+            <dt class="label">이메일</dt>
+
+            <dd class="cont" id="email">
+              <div class="inp-box email">
+                <div class="inp-email">
+                  <span>
+                    <input
+                      type="text"
+                      class="inp-base"
+                      value=""
+                      maxlength="50"
+                      placeholder="이메일"
+                      id="mberEmailFrst"
+                    />
+                  </span>
+
+                  <span class="bar">@</span>
+
+                  <span>
+                    <input
+                      type="text"
+                      class="inp-base"
+                      value=""
+                      maxlength="50"
+                      placeholder="직접입력"
+                      id="mberEmailEnd"
+                    />
+                  </span>
+                </div>
+
+                <div class="inp-sel">
+                  <select class="sel-base" id="emailSelect">
+                    <option>직접입력</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="hotmail.com">hotmail.com</option>
+                  </select>
+                  <!-- <div class="sel-base" tabindex="0">
+                    <span class="current">직접입력</span>
+                    <ul class="list">
+                      <li data-value="직접입력" class="option selected">
+                        직접입력
+                      </li>
+                      <li data-value="gmail.com" class="option">gmail.com</li>
+                      <li data-value="naver.com" class="option">naver.com</li>
+                      <li data-value="nate.com" class="option">nate.com</li>
+                      <li data-value="hotmail.com" class="option">
+                        hotmail.com
+                      </li>
+                    </ul>p-box
+                  </div> -->
+                </div>
+              </div>
+
+              <p class="msg-success" style="display: none">
+                사용가능한 이메일 입니다.
+              </p>
+
+              <p class="msg-error" style="display: none"></p>
+            </dd>
+          </dl>
+          <dl class="form-grid-item">
+            <dt class="label">휴대폰 번호</dt>
+
+            <dd class="cont" id="mberMbtlnum">
+              <div class="inp-box">
+                <span class="sel-box">
+                  <select class="sel-base2" id="emailSelect">
+                    <option disabled="" selected="">선택</option>
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="016">016</option>
+                    <option value="017">017</option>
+                    <option value="018">018</option>
+                    <option value="019">019</option>
+                  </select>
+                  <!-- <div class="nice-select sel-base readonly" tabindex="0">
+                    <span class="current">010</span>
+                    <ul class="list">
+                      <li data-value="선택" class="option disabled">선택</li>
+                      <li data-value="010" class="option selected">010</li>
+                      <li data-value="011" class="option">011</li>
+                      <li data-value="016" class="option">016</li>
+                      <li data-value="017" class="option">017</li>
+                      <li data-value="018" class="option">018</li>
+                      <li data-value="019" class="option">019</li>
+                    </ul>
+                  </div> -->
+                </span>
+
+                <span class="inp-box-second-span">
+                  <input
+                    type="text"
+                    class="inp-base-phone"
+                    maxlength="4"
+                    id="mberMbtlnumMiddle"
+                  />
+                </span>
+
+                <span class="inp-box-second-span">
+                  <input
+                    type="text"
+                    class="inp-base-phone"
+                    maxlength="4"
+                    id="mberMbtlnumEnd"
+                  />
+                </span>
+              </div>
+            </dd>
+          </dl>
+        </div>
+
+        <p class="txt-imp">
+          만 14세 미만 회원 가입 불가(단, 법정대리인 동의서 제출 시 적립금 합산
+          가능)
+        </p>
+
+        <div class="btn-wrap_fix">
+          <button type="button" class="btn-type-1" id="btnCancel">취소</button>
+          <button type="button" class="btn-type-2" id="btnConfirm">다음</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

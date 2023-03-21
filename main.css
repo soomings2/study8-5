@@ -1,0 +1,440 @@
+body {
+  min-width: 320px;
+}
+
+.join2_header {
+  text-align: center;
+  margin-top: 2rem;
+}
+.join2_title {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+.join2_cont {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #1c1c1c;
+  padding: 3.2rem 1rem 2.5rem;
+}
+.step_nav {
+  width: 100%;
+  padding: 0 0 2.9rem;
+  display: flex;
+  justify-content: center;
+}
+.step_nav_ul {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.step_nav li {
+  /* white-space: nowrap; */
+  /* flex: none; */
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -2.4px;
+  color: #e5e5e5;
+  position: relative;
+  line-height: 1;
+}
+.step_nav li.selected {
+  color: #1c1c1c;
+}
+.step_nav li.selected1 {
+  color: #1c1c1c;
+}
+.step_nav .selected:after {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  background: #e43d30;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: -0.85rem;
+  /* left나 top으로 요소를 정가운데로 두는 방법 중 하나입니다. 
+  x축, y축 모두 가운데로 두려면 translate(-50%,-50%)으로 하면 됩니다 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.step_nav li.selected + .step_nav_arrow,
+.step_nav li.selected1 + .step_nav_arrow,
+.step_nav li.complete + .step_nav_arrow {
+  opacity: 1;
+}
+.step_nav_arrow {
+  content: "";
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(./img/icon_arrow_right_03.svg) 52% 50%/10px no-repeat;
+  opacity: 0.15;
+}
+.title_2 {
+  font-size: 1.4rem;
+  line-height: 1.39;
+  font-weight: 700;
+}
+.title_2_text {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #000;
+  margin-top: 0.5rem;
+}
+.txt-1 {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #000;
+  word-break: keep-all;
+  margin-top: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+.color-point-red {
+  font-style: normal;
+  color: #e53e30 !important;
+}
+.form-grid {
+  margin-top: 1.5rem;
+}
+.form-grid-item {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #050505;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.label2 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1c1c1c;
+  width: 100%;
+  height: 2.9rem;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
+}
+.label:after {
+  content: "*";
+  display: inline-block;
+  height: 0.65rem;
+  margin-left: 0.1rem;
+  font-size: inherit;
+  font-weight: 600;
+  color: #e43d30;
+}
+.form-grid .cont {
+  margin-top: 0.5rem;
+}
+.inp-box {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.inp-base {
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.1rem;
+  padding: 0.8rem 1rem;
+  box-sizing: border-box;
+}
+input::placeholder {
+  color: rgb(187, 187, 187);
+}
+.inp-base:hover {
+  border-color: rgb(29, 29, 29);
+}
+.inp-box .btn-type-inner {
+  padding: 0.8rem 1.4rem;
+}
+.inp-box > * + button {
+  margin-left: 0.6rem;
+  flex: none;
+  font-weight: 600;
+}
+.btn-type-inner {
+  width: auto;
+  display: inline-flex;
+  border: solid 1px #666;
+  border-radius: 2px;
+}
+.btn-type-inner:before,
+.btn-type-inner:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+}
+button {
+  color: #1c1c1c;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+}
+.form-grid-item {
+  margin-top: 1.5rem;
+}
+.msg-txt {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #999;
+}
+.inp-base-gray {
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  padding: 0.8rem 1rem;
+  /* min-height: 50px; */
+  box-sizing: border-box;
+}
+.inp-base-gray:hover {
+  border-color: rgb(29, 29, 29);
+}
+.inp-base-gray {
+  padding: 0.8rem 1rem;
+  background: #f7f7f7;
+  border: 1px solid #e5e5e5;
+}
+.inp-box.radio-box {
+  display: flex;
+}
+.inp-box.radio-box .inp-radio {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+.inp-radio {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.inp-box.radio-box .inp-radio:first-child .label {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.inp-check > input,
+.inp-radio > input {
+  position: absolute;
+  left: -999999px;
+  width: 0;
+  height: 0;
+  opacity: 0.0001%;
+}
+.inp-radio > input:disabled + .label {
+  color: #ccc;
+}
+.inp-box.radio-box .label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1c1c1c;
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
+}
+.inp-box.radio-box input:checked + .label2 {
+  border-color: #e53e30;
+  color: #e53e30;
+  z-index: 1;
+}
+.inp-box.email .inp-email {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.inp-box.email .inp-email > span {
+  flex: 1;
+}
+.inp-box span.bar {
+  flex: none !important;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.inp-box.email .inp-sel {
+  width: 9rem;
+  margin-left: 0.6rem;
+}
+.inp-box.email .inp-sel .sel-base {
+  width: 100%;
+}
+.inp-sel {
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1rem;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  padding: 0.8rem 1rem;
+  box-sizing: border-box;
+}
+option {
+  font-weight: normal;
+  display: block;
+  white-space: nowrap;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+.sel-base {
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  border: none;
+  padding-right: 1rem;
+}
+.sel-box {
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1rem;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  padding: 0.8rem 2.5rem;
+  box-sizing: border-box;
+  width: 14rem;
+}
+.sel-base2 {
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  border: none;
+  padding-right: 5rem;
+}
+
+.inp-base-phone {
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1rem;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  padding: 0.8rem 1rem;
+  box-sizing: border-box;
+}
+.inp-base-phone {
+  padding: 0.95rem 1rem;
+  background: #f7f7f7;
+  border: 1px solid #e5e5e5;
+}
+.inp-base-phone:hover {
+  border-color: rgb(29, 29, 29);
+}
+.inp-box-second-span {
+  margin-left: 0.6rem;
+}
+.txt-imp {
+  margin-top: 1.5rem;
+  display: block;
+  padding-left: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.43;
+  background: url(./img/icon_error.svg) 0 1px/1rem no-repeat;
+  /* word-break: keep-all; */
+}
+.btn-wrap_fix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto 0;
+}
+.btn-type-1 {
+  font-size: 1rem;
+  border: solid 1px #ccc;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: 2px;
+  text-decoration: none;
+  box-sizing: border-box;
+  min-height: 3rem;
+  background: #fff;
+}
+.btn-type-2 {
+  font-size: 1rem;
+  border: solid 1px #ccc;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: 2px;
+  text-decoration: none;
+  box-sizing: border-box;
+  min-height: 3rem;
+  color: #ffffff;
+  background: #1d1d1d;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 680px) {
+  /* vw는 가로폭의 n퍼센트만큼 크기를 준다는 건데
+  특이한 경우 아니면 웬만해서는 안 쓰는 거 같더라구요. 저는 편해서 자주 씁니다.. */
+  .step_nav {
+    font-size: 2.8vw;
+  }
+  .step_nav li {
+    white-space: nowrap;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 1.7em;
+  }
+  .step_nav_arrow {
+    width: 0.5em;
+    height: 0.5em;
+  }
+  .step_nav .selected:after {
+    width: 0.3em;
+    height: 0.3em;
+    top: -0.6em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .step_nav {
+    font-size: 0.4rem;
+  }
+}
